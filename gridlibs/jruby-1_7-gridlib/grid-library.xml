@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grid-library os="all" script-engine="true">
+    <grid-library-name>jruby</grid-library-name>
+    <grid-library-version>${gridlib-version}</grid-library-version>
+    <jar-path>
+        <pathelement>lib</pathelement>
+    </jar-path>
+</grid-library>
