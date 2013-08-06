@@ -27,7 +27,7 @@ properties are set as follows in your enabler's container.xml:
 An example enabler script (referenced as "enabler.rb" in the XML above) in JRuby might look 
 like the following:
 
---- START ---
+```
 require 'java'
 java_import com.datasynapse.fabric.admin.info.AllocationInfo
 java_import com.datasynapse.fabric.util.GridlibUtils
@@ -60,7 +60,9 @@ def doInstall(info)
 end
     
 # ... etc ...
---- END ---
+```
 
 NOTE: this is not a complete enabler implementation and only serves as an example guide to get started. 
 Consult the Silver Fabric documentation for more information.
+
+
