@@ -5,7 +5,7 @@ JRuby Scripting Engine Guide
 
 Introduction
 --------------------------------------
-This project builds a JRuby grid library for use in creating Silver Fabric enablers in JRuby.
+This project builds a JRuby grid library for use in creating Silver Fabric Enabler scripts in JRuby.
 
 
 Installation
