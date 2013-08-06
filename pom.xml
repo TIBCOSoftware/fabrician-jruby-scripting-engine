@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.fabrician.scripting</groupId>
 	<artifactId>jruby</artifactId>
@@ -7,62 +6,62 @@
 	<packaging>pom</packaging>
 	<version>1.7.4</version>
 	<description>JRuby scripting engine for Silver Fabric</description>
-    <properties>        
-        <gridlib-name>${project.artifactId}-1_7-gridlib</gridlib-name>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <brokerUrl>http://localhost:8000/livecluster/rest/v1/sf/gridlibs/archives</brokerUrl>
-        <brokerUsername>admin</brokerUsername>
-        <brokerPassword>admin</brokerPassword>
-    </properties>
-    <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.4</version>   
-                <executions>           
-                    <execution>
-                        <id>create-gridlib</id>
-                        <configuration>
-                            <descriptor>src/main/assembly/gridlib.xml</descriptor>
-                            <finalName>${gridlib-name}</finalName>
-                            <appendAssemblyId>false</appendAssemblyId>
-                            <attach>true</attach>
-                        </configuration>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.fabrician.maven-plugins</groupId>
-                <artifactId>distribution-plugin</artifactId>
-                <version>1.1</version>
-                <executions>
-                    <execution>
-                        <id>upload-gridlibs</id>
-                        <phase>install</phase>
-                        <goals>
-                            <goal>upload</goal>
-                        </goals>
-                        <configuration>
-                            <gridlibOverwrite>true</gridlibOverwrite>
-                            <includes>
-                                <include>**/*.tar.gz</include>
-                            </includes>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-    <dependencies>
-        <dependency>
-	        <groupId>org.jruby</groupId>
-	        <artifactId>jruby-complete</artifactId>
-	        <version>1.7.4</version>
-	        <type>jar</type>
-        </dependency>
-    </dependencies>
+	<properties>
+		<gridlib-name>${project.artifactId}-1_7-gridlib</gridlib-name>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<brokerUrl>http://localhost:8000/livecluster/rest/v1/sf/gridlibs/archives</brokerUrl>
+		<brokerUsername>admin</brokerUsername>
+		<brokerPassword>admin</brokerPassword>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.4</version>
+				<executions>
+					<execution>
+						<id>create-gridlib</id>
+						<configuration>
+							<descriptor>src/main/assembly/gridlib.xml</descriptor>
+							<finalName>${gridlib-name}</finalName>
+							<appendAssemblyId>false</appendAssemblyId>
+							<attach>true</attach>
+						</configuration>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.fabrician.maven-plugins</groupId>
+				<artifactId>distribution-plugin</artifactId>
+				<version>1.1</version>
+				<executions>
+					<execution>
+						<id>upload-gridlibs</id>
+						<phase>install</phase>
+						<goals>
+							<goal>upload</goal>
+						</goals>
+						<configuration>
+							<gridlibOverwrite>true</gridlibOverwrite>
+							<includes>
+								<include>**/*.tar.gz</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+		<dependency>
+			<groupId>org.jruby</groupId>
+			<artifactId>jruby-complete</artifactId>
+			<version>1.7.4</version>
+			<type>jar</type>
+		</dependency>
+	</dependencies>
 </project>
