@@ -3,22 +3,11 @@
     <id>gridlib</id>
 	<baseDirectory></baseDirectory>
 	<formats>
-		<format>zip</format>
+		<format>tar.gz</format>
 	</formats>
 	<fileSets>
-		<fileSet>
-			<directory>${gridlib-dir}</directory>
-			<outputDirectory></outputDirectory>
-			<includes>
-				<include>**</include>
-			</includes>
-			<excludes>
-                <exclude>grid-library.xml</exclude>
-			</excludes>
-            <filtered>false</filtered>           
-		</fileSet>
         <fileSet>
-            <directory>${gridlib-dir}</directory>
+            <directory>src/main/resources</directory>
             <outputDirectory></outputDirectory>
             <includes>
                 <include>grid-library.xml</include>
