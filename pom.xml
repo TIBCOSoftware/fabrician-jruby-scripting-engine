@@ -3,7 +3,7 @@
 	<groupId>org.fabrician.scripting</groupId>
 	<artifactId>jruby</artifactId>
 	<name>JRuby 1.7.4</name>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 	<version>1.7.4</version>
 	<description>JRuby scripting engine for Silver Fabric</description>
 	<properties>
@@ -22,7 +22,9 @@
 					<execution>
 						<id>create-gridlib</id>
 						<configuration>
-							<descriptor>src/main/assembly/gridlib.xml</descriptor>
+							<descriptors>
+								<descriptor>src/main/assembly/gridlib.xml</descriptor>
+							</descriptors>
 							<finalName>${gridlib-name}</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 							<attach>true</attach>
